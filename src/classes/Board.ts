@@ -70,7 +70,7 @@ export default class Board {
           className = column % 2 === 0 ? 'square-dark' : 'square-light';
         }
 
-        const square = new Square(`${file}${rank}`, className);
+        const square = new Square(`${file}${rank}`, row, column, className);
         const position = {row, column};
 
         if (row === 0) { // rank 8

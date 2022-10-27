@@ -10,12 +10,23 @@ import {
 } from "react-icons/gi";
 
 interface SquareComponentProps {
+  row: number,
+  column: number,
   className: string;
   piece: Piece | null;
   name: string;
+  handleSquareClick: Function;
 }
 
-export default function SquareComponent({ className, piece, name }: SquareComponentProps) {
+export default function SquareComponent({ 
+  row,
+  column,
+  className, 
+  piece, 
+  name, 
+  handleSquareClick,
+}: SquareComponentProps) {
+
   let pieceIcon = null;
   let iconStyle = '';
 
@@ -50,7 +61,10 @@ export default function SquareComponent({ className, piece, name }: SquareCompon
   
 
   return (
-    <div className={className}>
+    <div 
+      className={className}
+      onClick={() => handleSquareClick(row, column)}
+    >
       <div>{name}</div>
       <div className="piece-icon">
         {piece !== null && pieceIcon}
