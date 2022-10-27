@@ -14,6 +14,9 @@
   height: 80px;
   width: 80px;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .square-dark {
@@ -23,4 +26,27 @@
 
 .square-light {
   background-color: azure;
+}
+
+.piece-icon {
+  height: 80%;
+  width: 80%;
+}
+
+.piece--black,
+.piece--white {
+  height: 80%;
+  width: 80%;
+}
+
+.piece--black {
+  fill: black;
+  stroke: lightslategrey;
+  stroke-width: 10px;
+}
+
+.piece--white {
+  fill: white;
+  stroke: darkslategrey;
+  stroke-width: 10px;
 }
