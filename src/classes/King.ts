@@ -31,16 +31,19 @@ export default class King extends Piece {
       King.moveCoordinates.forEach(coordinates => {
         const [newRow, newColumn] = [row + coordinates.row, column + coordinates.column];
 
-        if ((newRow || newColumn) < 0 || (newRow || newColumn) > 7) {
+        if (
+          newRow < 0 ||
+          newRow > 7 ||
+          newColumn < 0 ||
+          newColumn > 7
+        ) {
           return;
         } else {
           const move = board[newRow][newColumn];
 
           if (move.isEmpty()) {
             moves.push(move);
-          }
-
-          if (move && move.piece) {
+          } else if (move && move.piece) {
             if (move.piece.color !== this.color) {
               moves.push(move);
             }

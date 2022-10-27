@@ -28,6 +28,10 @@
   background-color: azure;
 }
 
+.legal-move {
+  background-color: lime;
+}
+
 .piece-icon {
   height: 80%;
   width: 80%;

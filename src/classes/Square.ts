@@ -1,3 +1,4 @@
+import { endianness } from "os";
 import Piece from "./Piece";
 
 export default class Square {
@@ -25,5 +26,30 @@ export default class Square {
 
   isEmpty() {
     return this.piece === null;
+  }
+
+  setClassNameTo(style: string) {
+    this.className = style;
+  }
+
+  displayAsLegalMove() {
+    //this.setClassNameTo(`${this.className} legal-move`);
+    if (this.className === 'square-dark') {
+      this.setClassNameTo('square-dark legal-move');
+    } 
+    
+    if (this.className === 'square-light') {
+      this.setClassNameTo('square-light legal-move');
+    }
+  }
+
+  resetDisplay() {
+    if (this.className === 'square-dark legal-move') {
+      this.setClassNameTo('square-dark');
+    }
+    
+    if (this.className === 'square-light legal-move') {
+      this.setClassNameTo('square-light');
+    }
   }
 }

@@ -58,7 +58,6 @@ export default function SquareComponent({
         break;
     }
   }
-  
 
   return (
     <div 

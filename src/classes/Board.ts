@@ -99,4 +99,12 @@ export default class Board {
 
     return board;
   }
+
+  resetAllSquares() {
+    this.squares.forEach(row => {
+      row.forEach(square => {
+        square.resetDisplay();
+      });
+    });
+  }
 }
