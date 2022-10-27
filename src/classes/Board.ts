@@ -61,7 +61,16 @@ export default class Board {
 
       for (let column = 0; column < 8; column++) {
         const file = Board.FILES[column];
-        const square = new Square(`${file}${rank}`);
+
+        let className = '';
+
+        if (row % 2 === 0) {
+          className = column % 2 === 0 ? 'square-light' : 'square-dark';
+        } else {
+          className = column % 2 === 0 ? 'square-dark' : 'square-light';
+        }
+
+        const square = new Square(`${file}${rank}`, className);
         const position = {row, column};
 
         if (row === 0) { // rank 8

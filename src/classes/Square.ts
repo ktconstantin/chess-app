@@ -2,10 +2,12 @@ import Piece from "./Piece";
 
 export default class Square {
   name: string;
+  className: string;
   piece: Piece | null;
 
-  constructor(name: string, piece: Piece | null = null) {
+  constructor(name: string, className: string, piece: Piece | null = null) {
     this.name = name;
+    this.className = className;
     this.piece = piece;
   }
 

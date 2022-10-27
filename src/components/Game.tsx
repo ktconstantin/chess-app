@@ -9,10 +9,9 @@ export default function Game() {
 
   console.log(board);
 
-
   return (
     <div className="game">
-      <BoardComponent />
+      <BoardComponent board={board} />
     </div>
   )
 }

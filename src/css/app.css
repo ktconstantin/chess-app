@@ -1,0 +1,26 @@
+@import-normalize;
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square-dark,
+.square-light {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+}
+
+.square-dark {
+  background-color: slateblue;
+  color: azure
+}
+
+.square-light {
+  background-color: azure;
+}
