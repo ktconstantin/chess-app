@@ -34,4 +34,8 @@ export default class Piece {
   setToUncaptured() {
     this.isCaptured = false;
   }
+
+  setPosition(newPosition: {row: number, column: number}) {
+    this.position = newPosition;
+  }
 }

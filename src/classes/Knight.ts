@@ -30,6 +30,7 @@ export default class Knight extends Piece {
 
       Knight.moveCoordinates.forEach(coordinates => {
         const [newRow, newColumn] = [row + coordinates.row, column + coordinates.column];
+        console.log([newRow, newColumn]);
 
         if (
           newRow < 0 ||
