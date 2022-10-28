@@ -1,9 +1,9 @@
-import { click } from '@testing-library/user-event/dist/click';
 import React, { useState } from 'react';
 import Board from '../classes/Board';
 import Piece from '../classes/Piece';
 import Square from '../classes/Square';
 import BoardComponent from './BoardComponent';
+import CapturedPieces from './CapturedPieces';
 
 const initialBoard = new Board();
 const initialLegalMoves: Square[] = [];
@@ -97,6 +97,7 @@ export default function Game() {
 
           // capture piece => add to captured pieces
           const pieceToCapture = clickedSquare.piece;
+          pieceToCapture.setAsCaptured();
           newCapturedPieces.push(pieceToCapture);
 
           newBoard[clickedSquare.row][clickedSquare.column].removePiece();
@@ -127,11 +128,17 @@ export default function Game() {
     if (piece === null) throw new Error('no piece to move');
 
     newBoard[from.row][from.column].removePiece();
+
     piece.setPosition({row: to.row, column: to.column});
+
+    if (piece.hasMoved === false) piece.setHasMoved();
+
     newBoard[to.row][to.column].setPiece(piece);
 
     setBoard(newBoard);
   }
+
+  console.log(capturedPieces);
 
   return (
     <div className="game">
@@ -139,6 +146,7 @@ export default function Game() {
         board={board}
         handleSquareClick={handleSquareClick}
       />
+      {capturedPieces.length > 0 && <CapturedPieces pieces={capturedPieces} />}
     </div>
   )
 }

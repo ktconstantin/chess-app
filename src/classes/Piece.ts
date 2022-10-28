@@ -27,15 +27,16 @@ export default class Piece {
     this.hasMoved = true;
   }
 
-  setToCaptured() {
+  setAsCaptured() {
     this.isCaptured = true;
+    this.setPosition(null);
   }
 
   setToUncaptured() {
     this.isCaptured = false;
   }
 
-  setPosition(newPosition: {row: number, column: number}) {
+  setPosition(newPosition: {row: number, column: number} | null) {
     this.position = newPosition;
   }
 }

@@ -1,5 +1,15 @@
 @import-normalize;
 
+.game { 
+  display: flex;
+}
+
+.captured-pieces {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .board {
   display: flex;
   flex-direction: column;
@@ -43,14 +53,31 @@
   width: 80%;
 }
 
-.piece--black {
+.piece--black,
+.captured-piece--black-icon {
   fill: black;
   stroke: lightslategrey;
   stroke-width: 10px;
 }
 
-.piece--white {
+.piece--white,
+.captured-piece--white-icon {
   fill: white;
   stroke: darkslategrey;
   stroke-width: 10px;
+}
+
+.captured-piece {
+  height: 40px;
+  width: 40px;
+}
+
+.captured-piece--black-icon,
+.captured-piece--white-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.captured-pieces__pieces-display {
+  display: flex;
 }
