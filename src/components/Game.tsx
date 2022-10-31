@@ -20,7 +20,7 @@ export default function Game() {
   const [capturedPieces, setCapturedPieces] = useState(initialCapturedPieces);
   const [canPromote, setCanPromote] = useState(false);
   const [promotionPosition, setPromotionPosition] = useState(initialPosition);
-  const [promotionOptions, setPromotionOptions] = useState(initialPromotionOptions);
+  //const [promotionOptions, setPromotionOptions] = useState(initialPromotionOptions);
 
   function changeSideToMove() {
     if (sideToMove === 'white') {
@@ -105,7 +105,7 @@ export default function Game() {
 
       setCanPromote(false);
       setPromotionPosition(initialPosition);
-      setPromotionOptions(initialPromotionOptions);
+      //setPromotionOptions(initialPromotionOptions);
 
       setBoard(newBoard);
       setCapturedPieces(newCapturedPieces);
