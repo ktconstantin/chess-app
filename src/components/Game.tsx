@@ -10,7 +10,7 @@ const initialLegalMoves: Square[] = [];
 const initialPosition = {row: 99, column: 99}
 //const initialCapturedPieces: Piece[] = [];
 const initialCapturedPieces: {black: Piece[], white: Piece[]} = {black: [], white: []};
-const initialPromotionOptions: Piece[] = [];
+//const initialPromotionOptions: Piece[] = [];
 
 export default function Game() {
   const [board, setBoard] = useState(initialBoard.squares);
