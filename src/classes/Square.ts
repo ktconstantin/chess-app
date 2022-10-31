@@ -33,7 +33,6 @@ export default class Square {
   }
 
   displayAsLegalMove() {
-    //this.setClassNameTo(`${this.className} legal-move`);
     if (this.className === 'square-dark') {
       this.setClassNameTo('square-dark legal-move');
     } 

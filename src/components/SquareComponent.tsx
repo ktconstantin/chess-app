@@ -64,7 +64,6 @@ export default function SquareComponent({
       className={className}
       onClick={() => handleSquareClick(row, column)}
     >
-      <div>{name}</div>
       <div className="piece-icon">
         {piece !== null && pieceIcon}
       </div>

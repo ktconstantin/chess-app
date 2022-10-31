@@ -51,10 +51,6 @@ export default function Game() {
     // setCapturedPieces(newCapturedPieces);
   }
 
-  function removeCapturedPiece() {
-
-  }
-
   function resetAllSquares() {
     const newBoard = board.slice();
 

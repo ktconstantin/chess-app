@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import Piece from '../classes/Piece';
 import CapturedPiece from './CapturedPiece';
 
-// interface CapturedPiecesProps {
-//   pieces: Piece[];
-// }
-
 interface CapturedPiecesProps {
   black: Piece[],
   white: Piece[],
