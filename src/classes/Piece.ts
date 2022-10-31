@@ -39,4 +39,14 @@ export default class Piece {
   setPosition(newPosition: {row: number, column: number} | null) {
     this.position = newPosition;
   }
+
+  canPromote() {
+    return (
+      this.type === 'pawn' &&
+      this.position !== null && (
+        (this.color === 'black' && this.position.row === 7) ||
+        (this.color === 'white' && this.position.row === 0)
+      )
+    );
+  }
 }

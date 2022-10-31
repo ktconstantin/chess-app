@@ -9,11 +9,18 @@ import {
 } from "react-icons/gi";
 
 interface CapturedPieceProps {
+  index: number,
   color: string,
   type: string,
+  handleCapturedPieceClick: Function,
 }
 
-export default function CapturedPiece({ color, type }: CapturedPieceProps) {
+export default function CapturedPiece({ 
+  index,
+  color, 
+  type,
+  handleCapturedPieceClick,
+ }: CapturedPieceProps) {
 
   let icon = null;
   let iconStyle = '';
@@ -46,7 +53,10 @@ export default function CapturedPiece({ color, type }: CapturedPieceProps) {
   }
   
   return (
-    <div className="captured-piece">
+    <div 
+      className="captured-piece"
+      onClick={() => handleCapturedPieceClick(index, color, type)}
+    >
       {icon}
     </div>
   )
