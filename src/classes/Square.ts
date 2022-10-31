@@ -1,4 +1,3 @@
-import { endianness } from "os";
 import Piece from "./Piece";
 
 export default class Square {

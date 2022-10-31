@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Piece from '../classes/Piece';
 import CapturedPiece from './CapturedPiece';
 

@@ -30,26 +30,26 @@ export default function Game() {
     }
   }
 
-  function addCapturedPiece(piece: Piece) {
-    //const newCapturedPieces = capturedPieces.slice();
+  // function addCapturedPiece(piece: Piece) {
+  //   //const newCapturedPieces = capturedPieces.slice();
 
-    const newCapturedBlackPieces = capturedPieces.black.slice();
-    const newCapturedWhitePieces = capturedPieces.white.slice();
+  //   const newCapturedBlackPieces = capturedPieces.black.slice();
+  //   const newCapturedWhitePieces = capturedPieces.white.slice();
 
-    if (piece.color === 'black') {
-      newCapturedBlackPieces.push(piece);
-    } else if (piece.color === 'white') {
-      newCapturedWhitePieces.push(piece);
-    }
+  //   if (piece.color === 'black') {
+  //     newCapturedBlackPieces.push(piece);
+  //   } else if (piece.color === 'white') {
+  //     newCapturedWhitePieces.push(piece);
+  //   }
 
-    setCapturedPieces({
-      black: newCapturedBlackPieces,
-      white: newCapturedWhitePieces,
-    });
+  //   setCapturedPieces({
+  //     black: newCapturedBlackPieces,
+  //     white: newCapturedWhitePieces,
+  //   });
 
-    // newCapturedPieces.push(piece);
-    // setCapturedPieces(newCapturedPieces);
-  }
+  //   // newCapturedPieces.push(piece);
+  //   // setCapturedPieces(newCapturedPieces);
+  // }
 
   function resetAllSquares() {
     const newBoard = board.slice();
@@ -223,15 +223,15 @@ export default function Game() {
           setCanPromote(true);
           setPromotionPosition({row: to.row, column: to.column});
 
-          let promotionOptions;
+          // let promotionOptions;
 
-          if (piece.color === 'black') {
-            promotionOptions = capturedPieces.black;
-          } else {
-            promotionOptions = capturedPieces.white;
-          }
+          // if (piece.color === 'black') {
+          //   promotionOptions = capturedPieces.black;
+          // } else {
+          //   promotionOptions = capturedPieces.white;
+          // }
 
-          setPromotionOptions(promotionOptions);
+          // setPromotionOptions(promotionOptions);
       }
     }
 
